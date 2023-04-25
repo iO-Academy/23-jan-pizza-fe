@@ -1,11 +1,12 @@
-import logo from './logo.svg';
 import './App.css';
 import PizzaComponent from "./PizzaComponent";
+import NavbarComponent from "./NavbarComponent";
 
 function App() {
   return (
     <div className="App">
-      <PizzaComponent />
+        <NavbarComponent />
+        <PizzaComponent />
     </div>
   );
 }
