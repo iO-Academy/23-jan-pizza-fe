@@ -1,9 +1,23 @@
-
+import Pizza from './pizza.png'
 
 const PizzaComponent = () => {
     return (
         <div>
-            <img src={}
+            <div className='bg-blue-200 h-screen flex justify-center items-center'>
+                <div className='group relative'>
+                    <img className='h-80' alt='pizza image' src={Pizza} />
+                    <div className='hidden bg-indigo-500 group-hover:block absolute top-0 left-0 text-white p-2 rounded-lg font-mono'>
+                        Click here to spin the pizza and pick from two toppings!
+                    </div>
+                </div>
+            </div>
         </div>
     )
 }
+
+export default PizzaComponent
+
+
+
+
+
