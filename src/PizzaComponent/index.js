@@ -3,14 +3,14 @@ import { useState } from 'react'
 
 const PizzaComponent = () => {
 
-    const [isSpinning, setIsSpinning] = useState(false);
+    const [isSpinning, setIsSpinning] = useState(false)
 
     const handleClick = () => {
-        setIsSpinning(true);
+        setIsSpinning(true)
         setTimeout(() => {
-            setIsSpinning(false);
-        }, 2000);
-    };
+            setIsSpinning(false)
+        }, 2000)
+    }
 
     return (
         <div>
