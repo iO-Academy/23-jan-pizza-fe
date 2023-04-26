@@ -5,6 +5,7 @@ import NavbarComponent from './NavbarComponent';
 
 function App() {
     const [toppings, setToppings] = useState([]);
+    const [showPizzaComponent, setShowPizzaComponent] = useState(false);
 
     useEffect(() => {
         fetch('http://localhost:8080/toppings')
@@ -12,11 +13,19 @@ function App() {
             .then((data) => setToppings(data));
     }, []);
 
+    const handleKeyPress = () => {
+        setShowPizzaComponent(true);
+    }
+
     return (
-        <div className="App">
-            {/* <LandingPage /> */}
-            <NavbarComponent />
-            <PizzaComponent toppings={toppings} />
+        <div className="App" onClick={handleKeyPress}>
+            {!showPizzaComponent && (
+                <>
+                    <LandingPage/>
+                </>
+            )}
+            {showPizzaComponent && <NavbarComponent />}
+            {showPizzaComponent && <PizzaComponent toppings={toppings} />}
         </div>
     );
 }
