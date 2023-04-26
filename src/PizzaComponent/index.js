@@ -1,15 +1,24 @@
 import Pizza from './pizza.png'
+import Rabbit from './rabbit.jpg'
 import { useState } from 'react'
 
 const PizzaComponent = () => {
 
     const [isSpinning, setIsSpinning] = useState(false)
 
+    const [showModal, setShowModal] = useState(false)
+
     const handleClick = () => {
         setIsSpinning(true)
         setTimeout(() => {
             setIsSpinning(false)
+            setShowModal(true) // Show the modal after the spinning animation finishes
         }, 2000)
+    }
+
+
+    const closeModal = () => {
+        setShowModal(false)
     }
 
     return (
@@ -26,10 +35,17 @@ const PizzaComponent = () => {
                         Click the pizza to display two toppings!
                     </div>
                 </div>
+                {showModal && (
+                    <div className='fixed top-0 left-0 w-full h-full bg-black/70 flex justify-center items-center' onClick={closeModal}>
+                        <div className='bg-orange-400 p-4 rounded-lg flex'>
+                            <img src={Rabbit} className='m-4 h-80' />
+                            <img src={Rabbit} className='m-4 h-80' />
+                        </div>
+                    </div>
+                )}
             </div>
         </div>
     )
 }
 
 export default PizzaComponent
-
