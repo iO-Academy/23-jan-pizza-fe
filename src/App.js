@@ -1,11 +1,20 @@
+
+import './App.css';
 import React from 'react'
 import LandingPage from ".//LandingPage/Index";
-const App = () => {
+import PizzaComponent from "./PizzaComponent";
+import NavbarComponent from "./NavbarComponent";
+
+const App() {
   return (
-      <div>
-    <LandingPage />
-      </div>
-  )
+    <div className="App">
+        <LandingPage />
+        <NavbarComponent />
+        <PizzaComponent />
+    </div>
+  );
+}
+
 
 }
 export default App;
