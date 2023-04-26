@@ -1,5 +1,4 @@
 import logo from './seadogs.png'
-import React, { useState} from "react";
 
 const LandingPage = () => {
     return (
