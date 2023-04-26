@@ -1,21 +1,18 @@
-
 import './App.css';
 import React from 'react'
 import LandingPage from ".//LandingPage/Index";
 import PizzaComponent from "./PizzaComponent";
 import NavbarComponent from "./NavbarComponent";
 
-const App() {
+function App() {
   return (
     <div className="App">
-        <LandingPage />
+        {/*<LandingPage />*/}
         <NavbarComponent />
         <PizzaComponent />
     </div>
   );
 }
 
-
-}
 export default App;
 
