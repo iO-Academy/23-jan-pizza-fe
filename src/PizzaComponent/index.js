@@ -23,7 +23,7 @@ const PizzaComponent = () => {
                         src={Pizza}
                     />
                     <div className='hidden bg-indigo-500 group-hover:block absolute top-0 left-0 text-white p-2 rounded-lg font-mono'>
-                        Click here to spin the pizza to display two toppings!
+                        Click the pizza to display two toppings!
                     </div>
                 </div>
             </div>
