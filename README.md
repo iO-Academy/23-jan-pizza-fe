@@ -1,9 +1,9 @@
-#**23-jan-pizza-toppings-app-fe**
+# **23-jan-pizza-toppings-app-fe**
 
 This app allows users to select their favorite pizza toppings from a list of options. The app is built using React on the front end and Node/Express on the back end, with a MongoDB database for storing the toppings data.
 
 
-#**Getting started**
+# **Getting started**
 
 To run the app locally, you will need to have the back end repo running via Node.js and MongoDB - link: https://github.com/iO-Academy/23-jan-pizza-be
 
@@ -30,15 +30,15 @@ npm start
 http://localhost:3000/
 
 
-#**APIs**
+# **APIs**
 This app exposes the following APIs:
 
-#**GET /toppings**
+# **GET /toppings**
 This API returns a list of all available toppings.
 
-#**Built with**
+# **Built with**
 - React - Front end library
 - TailwindCSS - styling
 
-#**Authors**
+# **Authors**
 Steph-ski, Yas-Shen, nesclark
