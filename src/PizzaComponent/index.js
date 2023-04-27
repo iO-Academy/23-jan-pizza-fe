@@ -56,4 +56,31 @@ const PizzaComponent = ({allToppings}) => {
     )
 }
 
+// const ToppingsComponent = () => {
+//     const [showModal, setShowModal] = useState(false);
+//
+//     const handleShowModal = () => {
+//         setShowModal(true);
+//     };
+//
+//     const handleCloseModal = () => {
+//         setShowModal(false);
+//     };
+//
+//     return (
+//         <div>
+//             <button onClick={handleShowModal}>Show Toppings</button>
+//             <div id="instructionModal" style={{display: showModal ? 'block' : 'none'}}>
+//                 <div className="modal-content">
+//                     <span id="toppingsModalClose" className="close" onClick={handleCloseModal}>&times;</span>
+//                     <div id="toppings">
+//                         <h2>Toppings</h2>
+//                         <p>Choose your toppings here</p>
+//                     </div>
+//                 </div>
+//             </div>
+//         </div>
+//     );
+// };
+
 export default PizzaComponent
