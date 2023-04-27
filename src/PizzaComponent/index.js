@@ -3,7 +3,7 @@ import Rabbit from '../ToppingComponent/rabbit.jpg'
 import { useState } from 'react'
 import ToppingsComponent from "../ToppingComponent";
 
-const PizzaComponent = ({toppings}) => {
+const PizzaComponent = ({randToppings}) => {
 
     const [isSpinning, setIsSpinning] = useState(false)
 
@@ -38,7 +38,7 @@ const PizzaComponent = ({toppings}) => {
                 {showModal && (
                     <div className='fixed top-0 left-0 w-full h-full bg-black/70 flex justify-center items-center' onClick={closeModal}>
                         <div className='bg-orange-400 p-4 rounded-lg flex'>
-                            {toppings.data.map((topping) => <ToppingsComponent topping={topping} />)}
+                            {randToppings.map((topping) => <ToppingsComponent topping={topping} />)}
                         </div>
                     </div>
                 )}
