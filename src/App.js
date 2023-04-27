@@ -4,16 +4,14 @@ import PizzaComponent from './PizzaComponent';
 import NavbarComponent from './NavbarComponent';
 
 function App() {
-    const [toppings, setToppings] = useState([]);
+    const [allToppings, setAllToppings] = useState([]);
     const [showPizzaComponent, setShowPizzaComponent] = useState(false);
 
     useEffect(() => {
         fetch('http://localhost:9000/toppings')
             .then((response) => response.json())
-            .then((data) => setToppings(data));
+            .then((response) => setAllToppings(response.data));
     }, []);
-
-    console.log(toppings)
 
     const handleKeyPress = () => {
         setShowPizzaComponent(true);
@@ -27,7 +25,7 @@ function App() {
                 </>
             )}
             {showPizzaComponent && <NavbarComponent />}
-            {showPizzaComponent && <PizzaComponent toppings={toppings} />}
+            {showPizzaComponent && <PizzaComponent allToppings={allToppings} />}
         </div>
     );
 }
