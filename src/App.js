@@ -8,10 +8,12 @@ function App() {
     const [showPizzaComponent, setShowPizzaComponent] = useState(false);
 
     useEffect(() => {
-        fetch('http://localhost:8080/toppings')
+        fetch('http://localhost:9000/toppings')
             .then((response) => response.json())
             .then((data) => setToppings(data));
     }, []);
+
+    console.log(toppings)
 
     const handleKeyPress = () => {
         setShowPizzaComponent(true);

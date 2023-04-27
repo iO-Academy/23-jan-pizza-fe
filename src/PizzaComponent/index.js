@@ -1,8 +1,9 @@
 import Pizza from './pizza.png'
-import Rabbit from './rabbit.jpg'
+import Rabbit from '../ToppingComponent/rabbit.jpg'
 import { useState } from 'react'
+import ToppingsComponent from "../ToppingComponent";
 
-const PizzaComponent = () => {
+const PizzaComponent = ({toppings}) => {
 
     const [isSpinning, setIsSpinning] = useState(false)
 
@@ -15,7 +16,6 @@ const PizzaComponent = () => {
             setShowModal(true) // Show the modal after the spinning animation finishes
         }, 2000)
     }
-
 
     const closeModal = () => {
         setShowModal(false)
@@ -38,8 +38,7 @@ const PizzaComponent = () => {
                 {showModal && (
                     <div className='fixed top-0 left-0 w-full h-full bg-black/70 flex justify-center items-center' onClick={closeModal}>
                         <div className='bg-orange-400 p-4 rounded-lg flex'>
-                            <img src={Rabbit} className='m-4 h-80' />
-                            <img src={Rabbit} className='m-4 h-80' />
+                            {toppings.data.map((topping) => <ToppingsComponent topping={topping} />)}
                         </div>
                     </div>
                 )}
