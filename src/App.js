@@ -1,16 +1,20 @@
-import './App.css';
-import React from 'react'
-import { useState } from "react";
-import LandingPage from "./LandingPage/Index";
-import PizzaComponent from "./PizzaComponent";
-import NavbarComponent from "./NavbarComponent";
+import React, { useState, useEffect } from 'react';
+import LandingPage from './LandingPage/Index';
+import PizzaComponent from './PizzaComponent';
+import NavbarComponent from './NavbarComponent';
 
 function App() {
-
+    const [allToppings, setAllToppings] = useState([]);
     const [showPizzaComponent, setShowPizzaComponent] = useState(false);
 
+    useEffect(() => {
+        fetch('http://localhost:9000/toppings')
+            .then((response) => response.json())
+            .then((response) => setAllToppings(response.data));
+    }, []);
+
     const handleKeyPress = () => {
-            setShowPizzaComponent(true);
+        setShowPizzaComponent(true);
     }
 
     return (
@@ -21,9 +25,9 @@ function App() {
                 </>
             )}
             {showPizzaComponent && <NavbarComponent />}
-            {<PizzaComponent />}
+            {showPizzaComponent && <PizzaComponent allToppings={allToppings} />}
         </div>
     );
 }
 
-    export default App;
+export default App;
