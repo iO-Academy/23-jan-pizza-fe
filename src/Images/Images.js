@@ -2,7 +2,7 @@ import Meatballs from './meatballs.jpeg'
 import Mozarella from './mozeralla.jpeg'
 import Mushrooms from './mushrooms.jpeg'
 import Olives from './olives.jpeg'
-import Onions from './onions.jpeg'
+import Onion from './onions.jpeg'
 import Parmesan from './parmesan.jpeg'
 import Peppers from './peppers.jpeg'
 import PlainChicken from './plain-chicken.jpeg'
@@ -27,7 +27,7 @@ const images = {
     Mozarella: Mozarella,
     Mushrooms: Mushrooms,
     Olives: Olives,
-    Onions: Onions,
+    Onion: Onion,
     Parmesan: Parmesan,
     Peppers: Peppers,
     PlainChicken: PlainChicken,
