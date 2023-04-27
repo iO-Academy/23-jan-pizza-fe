@@ -3,15 +3,25 @@ import Rabbit from '../ToppingComponent/rabbit.jpg'
 import { useState } from 'react'
 import ToppingsComponent from "../ToppingComponent";
 
-const PizzaComponent = ({randToppings}) => {
+const PizzaComponent = ({allToppings}) => {
 
     const [isSpinning, setIsSpinning] = useState(false)
 
     const [showModal, setShowModal] = useState(false)
 
+    const [randToppings, setRandToppings] = useState([])
+
+    console.log(allToppings)
+    const get2RandomToppings = (toppings) => {
+        return toppings.sort(() => Math.random() - Math.random()).slice(0, 2)
+    }
+
     const handleClick = () => {
+
         setIsSpinning(true)
+        setRandToppings(get2RandomToppings(allToppings))
         setTimeout(() => {
+
             setIsSpinning(false)
             setShowModal(true) // Show the modal after the spinning animation finishes
         }, 2000)
