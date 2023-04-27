@@ -2,17 +2,17 @@ import Meatballs from './meatballs.jpeg'
 import Mozarella from './mozeralla.jpeg'
 import Mushrooms from './mushrooms.jpeg'
 import Olives from './olives.jpeg'
-import Onion from './onions.jpeg'
+import Onions from './onions.jpeg'
 import Parmesan from './parmesan.jpeg'
 import Peppers from './peppers.jpeg'
 import PlainChicken from './plain-chicken.jpeg'
-import Proscuitto from './prosciutto.jpeg'
+import Prosciutto from './prosciutto.jpeg'
 import PulledPork from './pulled-pork.jpeg'
 import QuornChicken from './quorn-chicken.jpeg'
 import Rocket from './rocket.jpeg'
 import SpicyBeef from './spicy-beef.jpeg'
 import Sweetcorn from './sweetcorn.jpeg'
-import TandoorChicken from './tandoori-chicken.jpeg'
+import TandooriChicken from './tandoori-chicken.jpeg'
 import Tomato from './tomato.jpeg'
 import Aubergine from './aubergine.jpeg'
 import Bacon from './bacon.jpeg'
@@ -27,17 +27,17 @@ const images = {
     Mozarella: Mozarella,
     Mushrooms: Mushrooms,
     Olives: Olives,
-    Onion: Onion,
+    Onions: Onions,
     Parmesan: Parmesan,
     Peppers: Peppers,
     PlainChicken: PlainChicken,
-    Proscuitto: Proscuitto,
+    Prosciutto: Prosciutto,
     PulledPork: PulledPork,
     QuornChicken: QuornChicken,
     Rocket: Rocket,
     SpicyBeef: SpicyBeef,
     Sweetcorn: Sweetcorn,
-    TandoorChicken: TandoorChicken,
+    TandooriChicken: TandooriChicken,
     Tomato: Tomato,
     Aubergine: Aubergine,
     Bacon: Bacon,
