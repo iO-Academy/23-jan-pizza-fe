@@ -13,10 +13,6 @@ function App() {
             .then((response) => setAllToppings(response.data));
     }, []);
 
-    const get2RandomToppings = (toppings) => {
-        return toppings.sort(() => Math.random() - Math.random()).slice(0, 2)
-    }
-
     const handleKeyPress = () => {
         setShowPizzaComponent(true);
     }
@@ -29,7 +25,8 @@ function App() {
                 </>
             )}
             {showPizzaComponent && <NavbarComponent />}
-            {showPizzaComponent && <PizzaComponent randToppings={get2RandomToppings(allToppings)} />}
+            {/*{showPizzaComponent && <PizzaComponent randToppings={get2RandomToppings(allToppings)} />}*/}
+            {showPizzaComponent && <PizzaComponent allToppings={allToppings} />}
         </div>
     );
 }
