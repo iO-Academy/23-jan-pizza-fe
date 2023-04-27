@@ -25,7 +25,6 @@ function App() {
                 </>
             )}
             {showPizzaComponent && <NavbarComponent />}
-            {/*{showPizzaComponent && <PizzaComponent randToppings={get2RandomToppings(allToppings)} />}*/}
             {showPizzaComponent && <PizzaComponent allToppings={allToppings} />}
         </div>
     );

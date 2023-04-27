@@ -1,5 +1,4 @@
 import Pizza from './pizza.png'
-import Rabbit from '../ToppingComponent/rabbit.jpg'
 import { useState } from 'react'
 import ToppingsComponent from "../ToppingComponent";
 
@@ -23,7 +22,7 @@ const PizzaComponent = ({allToppings}) => {
         setTimeout(() => {
 
             setIsSpinning(false)
-            setShowModal(true) // Show the modal after the spinning animation finishes
+            setShowModal(true)
         }, 2000)
     }
 
