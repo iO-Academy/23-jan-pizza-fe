@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import LandingPage from './LandingPage/Index';
 import PizzaComponent from './PizzaComponent';
 import NavbarComponent from './NavbarComponent';
+import LeaderBoardComponent from "./LeaderBoardComponent";
 
 function App() {
     const [allToppings, setAllToppings] = useState([]);
@@ -26,6 +27,7 @@ function App() {
             )}
             {showPizzaComponent && <NavbarComponent />}
             {showPizzaComponent && <PizzaComponent allToppings={allToppings} />}
+            {showPizzaComponent && <LeaderBoardComponent />}
         </div>
     );
 }
