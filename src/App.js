@@ -27,7 +27,7 @@ function App() {
             )}
             {showPizzaComponent && <NavbarComponent />}
             {showPizzaComponent && <PizzaComponent allToppings={allToppings} />}
-            {showPizzaComponent && <LeaderBoardComponent />}
+            {showPizzaComponent && <LeaderBoardComponent allToppings={allToppings}/>}
         </div>
     );
 }
